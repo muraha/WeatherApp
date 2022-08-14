@@ -1,3 +1,7 @@
 import WeatherBlock from './WeatherBlock'
+import WeatherBlockBig from './WeatherBlockBig'
 
-export default WeatherBlock
+export {
+  WeatherBlock,
+  WeatherBlockBig
+}

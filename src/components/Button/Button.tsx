@@ -1,6 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
 
+import './Button.scss'
+
 interface ownProps {
   selected?: boolean
   city: string
@@ -15,7 +17,7 @@ const Button: React.FC<ownProps> = ({ selected, city, country, setCity }: ownPro
       className={cx('button', selected && 'button-selected')}
       onClick={() => !selected && setCity(city, country)}
     >
-      {city}
+      {city.toUpperCase()}
     </button>
   )
 }

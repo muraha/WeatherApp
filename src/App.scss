@@ -1,0 +1,35 @@
+@import './styles/customVariables.scss';
+
+.App {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.buttonsContainer {
+  height: 100px;
+  width: 40%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.weatherContainer {
+  border: $border;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px 13px #0000000d;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.todayWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.restDayWrapper {
+  display: flex;
+  width: 100%;
+}

@@ -1,0 +1,61 @@
+@import '../../styles/customVariables.scss';
+
+.container {
+  display: flex;
+  width: 25%;
+  flex-flow: column wrap;
+  align-items: center;
+
+  &:not(:last-child) {
+    border-right: $border;
+  }
+
+  &--big {
+    width: 100%;
+    border-bottom: $border;
+  }
+}
+
+.temp, .tempBig {
+  font-family: 'Teko', sans-serif;
+}
+
+// Big Weather Block
+.today {
+  font-size: $font-size-m;
+  padding-top: $padding-base;
+}
+
+.conditions {
+  font-size: $font-size-m;
+}
+
+.todayData {
+  display: flex;
+  margin-bottom: $margin-base
+}
+
+.iconBig {
+  width: 150px;
+  height: 150px;
+  & img {
+    transform: scale(1.5) translateX(17px) translateY(17px);
+  }
+}
+
+.tempBig{
+  font-size: $font-size-xl;
+  letter-spacing: 3px;
+  line-height: 84px;
+  padding-top: $padding-base;
+}
+
+// Small Weather block
+.day{
+  font-size: $font-size-s;
+  padding-top: $padding-base;
+}
+
+.temp{
+  font-size: $font-size-l;
+}
