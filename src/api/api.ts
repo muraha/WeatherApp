@@ -1,8 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
-// http://api.openweathermap.org/data/2.5/forecast?id=703448&appid=6bd01b54787d2cd00136d465f7bae07e
 
-const baseURL: string = 'https://api.openweathermap.org'
-const appid: string = '6bd01b54787d2cd00136d465f7bae07e'
+const baseURL = 'https://api.openweathermap.org'
+const appid = '6bd01b54787d2cd00136d465f7bae07e'
 
 const getLatLonUrlByCity = (q: string): string => `${baseURL}/geo/1.0/direct?q=${q}&appid=${appid}`
 
