@@ -1,4 +1,5 @@
 @import '../../styles/customVariables.scss';
+@import '../../styles/mixins.scss';
 
 .container {
   display: flex;
@@ -6,17 +7,23 @@
   flex-flow: column wrap;
   align-items: center;
 
-  &:not(:last-child) {
-    border-right: $border;
+
+  &--small {
+    border-top: $border;
+    margin-right: -$border-size;
+
+    &:not(:last-child) {
+      border-right: $border;
+    }
   }
 
   &--big {
     width: 100%;
-    border-bottom: $border;
   }
 }
 
-.temp, .tempBig {
+.temp,
+.tempBig {
   font-family: 'Teko', sans-serif;
 }
 
@@ -38,12 +45,17 @@
 .iconBig {
   width: 150px;
   height: 150px;
+
   & img {
     transform: scale(1.5) translateX(17px) translateY(17px);
   }
 }
 
-.tempBig{
+img {
+  filter: hue-rotate(210deg) contrast(1.1) saturate(2) brightness(0.8);
+}
+
+.tempBig {
   font-size: $font-size-xl;
   letter-spacing: 3px;
   line-height: 84px;
@@ -51,11 +63,17 @@
 }
 
 // Small Weather block
-.day{
+.day {
   font-size: $font-size-s;
   padding-top: $padding-base;
 }
 
-.temp{
+.temp {
   font-size: $font-size-l;
+}
+
+@include mobile {
+  .container--small {
+    width: 50%;
+  }
 }
