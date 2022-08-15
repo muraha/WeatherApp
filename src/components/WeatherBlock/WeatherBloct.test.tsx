@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
-import { WeatherBlockBig } from '.'
+import { WeatherBlock } from '.'
 
 describe('components/WeatherBlockBig', () => {
   describe('WeatherBlockBig.jsx', () => {
@@ -11,13 +11,24 @@ describe('components/WeatherBlockBig', () => {
           temp: 27,
           weather: "Clouds",
         },
-        daily: [],
-      }
+        daily: [{
+          icon: "12n",
+          temp: 29,
+          weather: "Clouds",
+        }, {
+          icon: "10d",
+          temp: 30,
+          weather: "Rain",
+        },
+        ],
+      },
+      dayShift: 1,
+      day: 'Mon'
     }
 
     it('should be rendered', () => {
-      render(<WeatherBlockBig {...props} />)
-      expect(screen.getByText('Today')).toBeInTheDocument()
+      render(<WeatherBlock {...props} />)
+      expect(screen.getByText('Mon')).toBeInTheDocument()
     })
   })
 })

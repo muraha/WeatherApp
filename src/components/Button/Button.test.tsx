@@ -1,6 +1,6 @@
-import Button from './Button'
-import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
+import Button from '.'
+import { render, screen, fireEvent } from '@testing-library/react'
 
 describe('components/Button', () => {
   describe('Button.jsx', () => {
