@@ -1,11 +1,10 @@
 import React from 'react'
-import { ForecastData } from '../interfaces/interfaces'
 
 type func = () => any
 
 export const useLocalStorageState = (
   key: string,
-  defaultValue: ForecastData|func|string = '',
+  defaultValue: func|string = '',
   {serialize = JSON.stringify, deserialize = JSON.parse} = {},
 ) => {
   const [state, setState] = React.useState(() => {

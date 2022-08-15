@@ -42,10 +42,10 @@ function App() {
 
   useEffect(() => {
     getCityForecast(city, country)
-  }, [])
+  }, []) // eslint-disable-line
 
   return (
-    <div className='App'>
+    <div className='App' data-testid='weatherApp'>
       <div className='buttonsContainer'>
         <Button
           city={"Ottawa"}
