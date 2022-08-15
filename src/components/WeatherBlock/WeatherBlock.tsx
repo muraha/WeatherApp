@@ -20,7 +20,7 @@ const WeatherBlock: React.FC<ownProps> = ({ big, day, dayShift, forecast }: ownP
     <div className="icon">
       <img src={getImgUrl(icon)} alt="" />
     </div>
-    <div className="temp">{`${Math.round(temp)}°`}</div>
+    <div className="temp">{temp + '°'}</div>
   </div>
 }
 

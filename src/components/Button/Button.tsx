@@ -10,7 +10,7 @@ interface ownProps {
   setCity: (city:string, country:string) => any
 }
 
-const Button: React.FC<ownProps> = ({ selected, city, country, setCity }: ownProps): JSX.Element => {
+export const Button: React.FC<ownProps> = ({ selected, city, country, setCity }: ownProps): JSX.Element => {
 
   return (
     <button

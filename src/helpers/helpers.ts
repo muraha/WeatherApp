@@ -5,13 +5,13 @@ export const formatResponse = (response: ForecastResponse | null): ForecastData 
   const { current, daily } = response
 
   const currentRes = {
-    temp: current.temp,
+    temp: Math.round(current.temp),
     weather: current.weather[0].main,
     icon: current.weather[0].icon
   }
 
   const dailyRes = daily.map((d:DailyData) => ({
-    temp: d.temp.day,
+    temp: Math.round(d.temp.day),
     weather: d.weather[0].main,
     icon: d.weather[0].icon
   }))
@@ -29,10 +29,10 @@ export const toTextFromDay = (day: number): string => ({
     4: 'Thu',
     5: 'Fri',
     6: 'Sat',
-    7: 'Sun'
+    0: 'Sun'
   }[day] || '')
 
-export const getDay = (dayShift: number): string => {
+export const getDay = (dayShift: number = 0): string => {
   const date = new Date()
   const today = date.getDay()
   const day = (today + dayShift) % 7
