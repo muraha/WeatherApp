@@ -9,7 +9,8 @@ $font-weight-medium: 400;
 $font-weight-bold: 800;
 
 // border
-$border: 5px solid white;
+$border-size: 5px;
+$border: $border-size solid white;
 
 //paddings margins
 $padding-base: 20px;

@@ -1,4 +1,5 @@
 @import './styles/customVariables.scss';
+@import './styles/mixins.scss';
 
 .App {
   display: flex;
@@ -9,7 +10,7 @@
 .buttonsContainer {
   height: 100px;
   width: 40%;
-  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
   align-items: center;
 }
@@ -21,6 +22,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+  margin-bottom: $margin-base;
 }
 
 .todayWrapper {
@@ -31,5 +33,26 @@
 
 .restDayWrapper {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
+}
+
+@include tablet {
+  .buttonsContainer,
+  .weatherContainer {
+    width: 70%;
+  }
+}
+
+@include mobile {
+  .buttonsContainer,
+  .weatherContainer {
+    width: 90%;
+  }
+
+  .buttonsContainer{
+    flex-flow: column;
+    height: 100%;
+    padding-bottom: $padding-base;
+  }
 }

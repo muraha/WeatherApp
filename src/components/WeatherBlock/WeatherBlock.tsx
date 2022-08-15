@@ -1,3 +1,4 @@
+import cx from "classnames"
 import React from "react"
 import { ForecastData } from "../../interfaces/interfaces"
 import { getImgUrl } from "../../api/api"
@@ -18,7 +19,7 @@ const WeatherBlock: React.FC<ownProps> = ({
   const { temp, icon } = forecast.daily[dayShift]
 
   return (
-    <div className='container'>
+    <div className={cx("container", "container--small")}>
       <div className='day'>{day}</div>
       <div className='icon'>
         <img src={getImgUrl(icon)} alt='' />
