@@ -42,7 +42,7 @@ function App() {
 
   useEffect(() => {
     getCityForecast(city, country)
-  }, [])
+  }, []) // eslint-disable-line
 
   return (
     <div className='App'>

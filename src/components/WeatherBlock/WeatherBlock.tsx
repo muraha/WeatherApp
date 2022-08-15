@@ -1,7 +1,6 @@
 import React from 'react'
 import { ForecastData } from '../../interfaces/interfaces'
 import { getImgUrl } from '../../api/api'
-import cx from 'classnames'
 
 import './WeatherBlock.scss'
 
